@@ -1,0 +1,142 @@
+/*
+Theme Name: Portland
+Theme URI: http://themefoundation.com/
+Description: The Portland theme was built as an example for a presentation at WordCamp Portland
+Author: Theme Foundation
+Author URI: http://themefoundation.com/
+Version: 1.0.0
+License: GNU General Public License
+License URI: license.txt
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+
+img,
+.wp-caption {
+	max-width: 100%;
+	height: auto;
+}
+
+body{
+	overflow-y: scroll;
+}
+
+pre {
+	overflow-x: scroll;
+}
+
+.wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.portland-featured-image .wrap {
+	max-width: 1600px;
+	text-align: center;
+}
+
+.site-title {
+	font-size: 2em;
+	line-height: 100px;
+	float: left;
+	margin: 0;
+}
+
+.skip-link {
+	position: absolute;
+	top:-100px;
+
+	/* Styled to match the default WordPress screen reader text */
+	background-color: #f1f1f1;
+	-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,.6);
+	box-shadow:0 0 2px 2px rgba(0,0,0,.6);
+	color: #21759b;
+	display: block;
+	font-family: "Open Sans",sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	height: auto;
+	left:6px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+}
+
+.skip-link:focus {
+	color: #21759b;
+	top: 7px;
+	clip: auto !important;
+	-webkit-transition: top 0s;
+	transition: top 0s;
+}
+
+#header .menu {
+	padding: 0;
+	margin: 0;
+	float: right;
+	line-height: 100px;
+}
+
+#header .menu li {
+	float: left;
+	list-style: none;
+}
+
+#header .menu li a {
+	padding: 5px 10px;
+}
+
+#header:after,
+#main:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+
+.content-sidebar .primary {
+	width: 60%;
+	float: left;
+}
+
+.content-sidebar .secondary {
+	width: 30%;
+	float: right;
+}
+
+.sidebar-content .primary {
+	width: 60%;
+	float: right;
+}
+
+.sidebar-content .secondary {
+	width: 30%;
+	float: left;
+}
+
+.content-only .primary {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#footer {
+	margin-top: 4em;
+}
