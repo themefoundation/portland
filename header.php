@@ -8,13 +8,27 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<?php do_action( 'portland_head_top' ); ?>
+	<?php
+	/**
+	 * Fires just inside the opening head tag in the header.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'portland_head_top' );
+	?>
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="<?php echo apply_filters( 'portland_viewport', 'width=device-width, initial-scale=1' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<?php do_action( 'portland_head_bottom' ); ?>
+	<?php
+	/**
+	 * Fires just inside the closing head tag in the header.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'portland_head_bottom' );
+	?>
 	<?php wp_head(); ?>
 </head>
 
@@ -153,11 +167,39 @@ if ( !function_exists( 'portland_main_open' ) ) {
  * @since 1.0.0
  */
 
-// Use this hook to add and remove actions from header hooks.
+/**
+ * Fires before the header has been set up.
+ *
+ * Use this hook to add and remove actions from header hooks.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_header_setup' );
 
+/**
+ * Fires at the top of the page body.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_body_top' );
 
+/**
+ * Fires just before the header is rendered.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_header_before' );
+
+/**
+ * Fires when the header is rendered.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_header' );
+
+/**
+ * Fires just after the header is rendered.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_header_after' );

@@ -110,36 +110,90 @@ function portland_content_close() {
 
 get_header();
 
-// Use this hook to add and remove actions.
+/**
+ * Fires before the templates are set up.
+ *
+ * Use this hook to add and remove actions.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_template_setup' );
 
+/**
+ * Fires just prior to rendering the content.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_content_before' );
+
+/**
+ * Fires at the top of the rendered page content.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_content_top' );
 
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
+		/**
+		 * Fires just before an entry is rendered in The Loop.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'portland_entry_before' );
 
 		get_template_part(
+			/**
+			 * Filter the template part slug for an entry in The Loop.
+			 *
+			 * @since 1.0.0
+			 */
 			apply_filters( 'portland_template_part_slug', 'template-parts/content' ),
+
+			/**
+			 * Filter the template part name for an entry in The Loop.
+			 *
+			 * @since 1.0.0
+			 */
 			apply_filters( 'portland_template_part_name', '' )
 		);
 
+		/**
+		 * Fires just after an entry is rendered in The Loop.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'portland_entry_after' );
 	}
 } else {
+	/** This action is documented in index.php */
 	do_action( 'portland_entry_before' );
 
 	get_template_part(
+		/** This filter is documented in index.php */
 		apply_filters( 'portland_404_template_part_slug', 'template-parts/404' ),
+
+		/** This filter is documented in index.php */
 		apply_filters( 'portland_404_template_part_name', '' )
 	);
 
+	/** This action is documented in index.php */
 	do_action( 'portland_entry_after' );
 }
 
+/**
+ * Fires at the bottom of the rendered page content.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_content_bottom' );
+
+/**
+ * Fires immediately following the rendered page content.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_content_after' );
 
 get_sidebar();
