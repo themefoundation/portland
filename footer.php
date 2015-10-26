@@ -123,13 +123,41 @@ if ( !function_exists( 'portland_footer_close' ) ) {
  * @since 1.0.0
  */
 
-// Use this hook to add and remove actions footer hooks.
+/**
+ * Fires before the footer has been set up.
+ *
+ * Use this hook to add and remove actions from the footer hooks.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_footer_setup' );
 
+/**
+ * Fires just before the footer is rendered.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_footer_before' );
+
+/**
+ * Fires when the footer is rendered.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_footer' );
+
+/**
+ * Fires just after the footer is rendered.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_footer_after' );
 
+/**
+ * Fires at the bottom of the page body, after the footer has rendered.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_body_bottom' );
 
 wp_footer();

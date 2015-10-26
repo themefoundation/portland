@@ -6,16 +6,36 @@
  * @since 1.0.0
  */
 
-// Use this hook to add and remove actions.
+/**
+ * Fires before a template part is set up.
+ *
+ * Use this hook to add and remove actions.
+ *
+ * @since 1.0.0
+ */
 do_action( 'portland_template_part_setup' );
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php do_action( 'portland_entry_top' ); ?>
+	<?php
+	/**
+	 * Fires at the top of an entry in a given template part.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'portland_entry_top' );
+	?>
 
 	<?php the_post_thumbnail( apply_filters( 'portland_thumbnail_size', '' ) ); ?>
 
-	<?php do_action( 'portland_entry_title_before' ); ?>
+	<?php
+	/**
+	 * Fires just before the title element in an entry in a template part.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'portland_entry_title_before' );
+	?>
 	<h2 class="<?php echo apply_filters( 'portland_entry_title_class', 'entry-title' ); ?>">
 		<a href="<?php the_permalink(); ?>">
 			<?php the_title(); ?>
