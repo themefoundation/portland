@@ -172,10 +172,10 @@ if ( have_posts() ) {
 
 	get_template_part(
 		/** This filter is documented in index.php */
-		apply_filters( 'portland_404_template_part_slug', 'template-parts/404' ),
+		apply_filters( 'portland_template_part_slug', 'template-parts/404' ),
 
 		/** This filter is documented in index.php */
-		apply_filters( 'portland_404_template_part_name', '' )
+		apply_filters( 'portland_template_part_name', '' )
 	);
 
 	/** This action is documented in index.php */

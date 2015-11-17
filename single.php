@@ -2,7 +2,7 @@
 /**
 * Single post template
 *
-* @package Longview
+* @package Portland
 * @since 1.0.0
 */
 
@@ -33,7 +33,14 @@ function portland_single_featured_image() {
 			<div class="row portland-featured-image">
 				<div class="wrap">
 					<div>
-						<?php the_post_thumbnail( apply_filters( 'portland_thumbnail_size', '' ) ); ?>
+						<?php
+						/**
+						 * Filters the thumbnail size.
+						 *
+						 * @since 1.0.0
+						 */
+						the_post_thumbnail( apply_filters( 'portland_thumbnail_size', '' );
+						?>
 					</div>
 				</div>
 			</div>

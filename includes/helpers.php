@@ -5,7 +5,7 @@
  * This file contains functions to extend the functionality of the
  * Portland theme.
  *
- * @package Longview
+ * @package Portland
  * @since 1.0.0
  */
 

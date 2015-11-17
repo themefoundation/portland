@@ -2,7 +2,7 @@
 /**
  *  Sidebar template
  *
- * @package Longview
+ * @package Portland
  * @since 1.0.0
  */
 
@@ -11,6 +11,7 @@ $sidebar_id = 'sidebar-1';
 
 // Is the first sidebar active and does the layout call for at least one sidebar?
 if ( is_active_sidebar( $sidebar_id ) && substr_count( $sidebar_layout, 'sidebar' ) > 0 ) {
+
 	/**
 	 * Fires before the sidebar is rendered.
 	 *
@@ -48,6 +49,7 @@ if ( is_active_sidebar( $sidebar_id ) && substr_count( $sidebar_layout, 'sidebar
 	 * @param int|string $sidebar_id Sidebar ID.
 	 */
 	do_action( 'portland_sidebar_bottom', $sidebar_id );
+	
 	echo '</div><!--.secondary-->';
 
 	/**

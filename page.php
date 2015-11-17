@@ -35,7 +35,14 @@ function portland_page_featured_image() {
 			<div class="row portland-featured-image">
 				<div class="wrap">
 					<div>
-						<?php the_post_thumbnail( apply_filters( 'portland_thumbnail_size', 'small' ) ); ?>
+						<?php
+						/**
+						 * Filters the thumbnail size.
+						 *
+						 * @since 1.0.0
+						 */
+						the_post_thumbnail( apply_filters( 'portland_thumbnail_size', 'small' );
+						?>
 					</div>
 				</div>
 			</div>

@@ -2,7 +2,7 @@
 /**
  * Comments template
  *
- * @package Longview
+ * @package Portland
  * @since 1.0.0
  */
 
